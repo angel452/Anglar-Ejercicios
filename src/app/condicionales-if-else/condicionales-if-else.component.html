@@ -1,0 +1,14 @@
+<div class="container mx-auto mt-10 text-center p-5 bg-gray-800 rounded shadow-lg">
+    <h1 class="text-3xl font-bold text-white mb-4">Estatus de Autenticación</h1>
+    
+    @if (isAuthenticated) {
+        <p class="text-green-400 text-lg font-semibold">Usuario Autenticado</p>
+    } @else {
+        <p class="text-red-500 text-lg font-semibold">Usuario No Autenticado</p>
+    }
+
+    <button class="mt-6 bg-blue-600 text-white rounded px-4 py-2 hover:bg-blue-700 transition duration-300" 
+            (click)="alternarAutenticacion()">
+        Cambiar Estatus
+    </button>
+</div>
