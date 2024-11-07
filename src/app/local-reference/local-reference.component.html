@@ -1,0 +1,21 @@
+<div class="container mx-auto mt-10 p-5 bg-gray-800 rounded shadow-lg text-center">
+    <h1 class="text-3xl font-bold text-white mb-4">Agregar Tarea</h1>
+    <div class="mb-4">
+        <input type="text" #tareaInput placeholder="Escribe una tarea" 
+            class="border border-gray-400 rounded p-2 w-2/3 text-gray-800" />
+    </div>
+    <div>
+        <button class="bg-blue-600 text-white rounded px-4 py-2 hover:bg-blue-700 transition duration-300" 
+                (click)="agregarTarea(tareaInput.value); tareaInput.value=''">
+            Agregar
+        </button>
+    </div>
+    <div class="mt-6">
+        @if (tarea) {
+            <h2 class="text-xl text-green-400">Tarea Agregada</h2>
+            <p class="text-white">{{ tarea }}</p>
+        } @else {
+            <h2 class="text-xl text-red-400">No hay tarea agregada</h2>
+        }
+    </div>
+</div>
