@@ -1,0 +1,15 @@
+<div class="max-w-xl mx-auto bg-gray-800 text-white p-6 rounded-lg shadow-lg">
+    <h1 class="text-3xl font-semibold text-center mb-6">Componente Hijo</h1>
+
+    <!-- Mensaje que viene del padre -->
+    <p class="text-lg mb-4">
+        <span class="font-medium">Contenido:</span> {{ mensaje }}
+    </p>
+
+    <!-- Botón para enviar mensaje al padre -->
+    <button 
+        class="w-full py-2 px-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-md shadow-md transition duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
+        (click)="enviarMensaje()">
+        Enviar Mensaje al Padre
+    </button>
+</div>
