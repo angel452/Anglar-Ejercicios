@@ -1,0 +1,12 @@
+<div class="container bg-gray-600 text-white p-3 rounded-lg shadow-lg">
+    <h1 class="text-2xl font-semibold mb-4">Componente Padre</h1>
+
+    <app-hijo [mensaje]="mensajePadre" (notificarPadre)="recibirNotificacion($event)"></app-hijo>
+
+    <div class="mt-4 p-4 bg-gray-700 rounded-md">
+        @if (mensajeHijo){
+            <p class="text-lg font-medium"> Notificación: {{mensajeHijo}} </p>
+        }
+    </div>
+
+</div>
