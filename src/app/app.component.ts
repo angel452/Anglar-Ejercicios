@@ -9,11 +9,12 @@ import { CondicionalesIfElseComponent } from "./condicionales-if-else/condiciona
 import { LocalReferenceComponent } from "./local-reference/local-reference.component";
 import { BucleForComponent } from "./bucle-for/bucle-for.component";
 import { ViewChildComponent } from "./view-child/view-child.component";
+import { ListaUsuariosComponent } from "./lista-usuarios/lista-usuarios.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NewComponentComponent, InterpolationComponentComponent, PadreComponentComponent, MostrarMsgComponent, ReplicadorComponent, CondicionalesIfElseComponent, LocalReferenceComponent, BucleForComponent, ViewChildComponent],
+  imports: [RouterOutlet, NewComponentComponent, InterpolationComponentComponent, PadreComponentComponent, MostrarMsgComponent, ReplicadorComponent, CondicionalesIfElseComponent, LocalReferenceComponent, BucleForComponent, ViewChildComponent, ListaUsuariosComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
