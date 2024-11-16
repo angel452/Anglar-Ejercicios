@@ -13,13 +13,14 @@ import { ListaUsuariosComponent } from "./lista-usuarios/lista-usuarios.componen
 import { ExPipes01Component } from "./ex-pipes01/ex-pipes01.component";
 import { registerLocaleData } from '@angular/common';
 import localeEs from '@angular/common/locales/es';
+import { NavegacionComponent } from "./navegacion/navegacion.component";
 
 registerLocaleData(localeEs, 'es');
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NewComponentComponent, InterpolationComponentComponent, PadreComponentComponent, MostrarMsgComponent, ReplicadorComponent, CondicionalesIfElseComponent, LocalReferenceComponent, BucleForComponent, ViewChildComponent, ListaUsuariosComponent, ExPipes01Component],
+  imports: [RouterOutlet, NewComponentComponent, InterpolationComponentComponent, PadreComponentComponent, MostrarMsgComponent, ReplicadorComponent, CondicionalesIfElseComponent, LocalReferenceComponent, BucleForComponent, ViewChildComponent, ListaUsuariosComponent, ExPipes01Component, NavegacionComponent],
   providers: [{provide: LOCALE_ID, useValue: 'es'}],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
