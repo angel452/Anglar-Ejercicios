@@ -1,0 +1,39 @@
+<!-- Barra de navegacion -->
+<nav class="bg-blue-500 text-white p-4">
+    <div>
+        <a [routerLink]="['/']">Angular Apps</a>
+    </div>
+
+    <button type="button" data-bs-toogle="collapce"
+        data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <ul class="flex space-x-4">
+        <li>
+            <a [routerLink]="['/']" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" aria-current="page">Inicio</a>
+        </li>
+
+        <li>
+            <a [routerLink]="['/mostrar-mensaje']" routerLinkActive="active" [queryParams]="{mensajeFromNAV:'Mensaje desde el NAV'}" > Mensajes </a>
+        </li>
+
+        <li class="relative">
+            <button (click)="toogleDropdown()" class="nav-link text-white hover:bg-indigo-600 focus:outline-none">
+                Dropdown
+            </button>
+            @if (isOpen) {
+                <ul class="absolute right-0 mt-2 w-48 bg-white shadow-lg rounded-md z-10 text-black">
+                    <li>
+                        <a [routerLink]="['/configuracion/padre']" routerLinkActive="active"
+                            class="block px-4 py-2 text-sm hover:bg-indigo-600 hover:text-white"> Componente Padre </a>
+                    </li>
+                    <li>
+                        <a [routerLink]="['/configuracion/hijo']" routerLinkActive="active"
+                            class="block px-4 py-2 text-sm hover:bg-indigo-600 hover:text-white"> Componente Hijo </a>
+                    </li>
+                </ul>
+            }
+        </li>
+    </ul>
+</nav>
